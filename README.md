@@ -8,6 +8,28 @@ LargeRDFBench has been published at journal of web semantics. The pdf is availab
 
 Saleem, Muhammad, Ali Hasnain, and Axel-Cyrille Ngonga Ngomo. "LargeRDFBench: A billion triples benchmark for SPARQL endpoint federation." Journal of Web Semantics 48 (2018): 85-125.
 
+### Interoperable Edition
+
+The original benchmark datasets are not parseable by all standards-compliant RDF tooling, and the expected results were provided in an ad hoc format.
+We provide an interoperable edition of the benchmark — cleaned datasets and expected results in the SPARQL 1.1 Query Results JSON Format — at:
+
+https://cloud.ilabt.imec.be/index.php/s/xzE93HaqAbr2kSD
+
+The scripts that generate this edition from the original benchmark are
+available at https://github.com/shape-federated-queries/large-rdf-bench-modernization.
+
+The expected results contain a small number of corrections with respect to the
+original, all artifacts of the tooling that produced them: corrupted character
+encodings (e.g. `Asunci�n G�mez-P�rez` → `Asunción Gómez-Pérez`), literal
+`'null'` values standing in for unbound `OPTIONAL` variables, and rows the
+original engine dropped although they are faithful to the source data (a
+trailing-space `rdfs:label` in C8; a bag-semantics duplicate in S7 whose join
+triple is asserted by two datasets). Each correction is backed by a
+reproducible verification script:
+
+https://github.com/shape-federated-queries/large-rdf-bench-result-analysis/tree/main/verify
+
+
 ### Benchmark Datasets Statistics
 
 In the following we provide information about the datasets used in LargeRDFBench along with download links, both for data-dumps and Virtuso-7.10 SPARQL endpoints. 
@@ -160,8 +182,4 @@ Following are the specifications of the machines used in the evaluation to host 
   * [ Maulik Kamdar](http://maulik-kamdar.com/) (Standford University)
  
 We are especially thankful to Helena Deus (Foundations Medicine,  Cambridge, MA, USA) and Shanmukha Sampath (Democritus University of Thrace, Alexandroupoli, Greece) 
-for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany), Olaf Hartig (HPI, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations. 	
-
-	
-
-			
+for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany), Olaf Hartig (HPI, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations.
