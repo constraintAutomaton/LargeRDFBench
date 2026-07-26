@@ -10,8 +10,11 @@ Saleem, Muhammad, Ali Hasnain, and Axel-Cyrille Ngonga Ngomo. "LargeRDFBench: A 
 
 ### Interoperable Edition
 
-The original benchmark datasets are not parseable by all standards-compliant RDF tooling, and the expected results were provided in an ad hoc format.
-We provide an interoperable edition of the benchmark — cleaned datasets and expected results in the SPARQL 1.1 Query Results JSON Format — at:
+The original benchmark datasets are not parseable by all standards-compliant
+RDF tooling, and the expected results were provided in an ad hoc format.
+
+We provide an interoperable edition of the benchmark — cleaned datasets and
+expected results in the SPARQL 1.1 Query Results JSON Format — at:
 
 https://cloud.ilabt.imec.be/index.php/s/xzE93HaqAbr2kSD
 
