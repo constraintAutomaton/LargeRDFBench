@@ -23,7 +23,7 @@ available at https://github.com/shape-federated-queries/large-rdf-bench-moderniz
 
 The expected results contain a small number of corrections with respect to the
 original, all artifacts of the tooling that produced them: corrupted character
-encodings (e.g. `Asunci�n G�mez-P�rez` → `Asunción Gómez-Pérez`), literal
+encodings (e.g., `Asunci�n G�mez-P�rez` → `Asunción Gómez-Pérez`), literal
 `'null'` values standing in for unbound `OPTIONAL` variables, and rows the
 original engine dropped although they are faithful to the source data (a
 trailing-space `rdfs:label` in C8; a bag-semantics duplicate in S7 whose join
